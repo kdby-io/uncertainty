@@ -1,8 +1,22 @@
 {
   "name": "uncertainty",
   "version": "0.1.0-alpha.0",
+  "description": "An uncertain data having a definite value when measured.",
   "main": "index.js",
   "repository": "git@github.com:vichyssoise/uncertainty.git",
   "author": "Vichyssoise <v@vichyssoise.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "quantum",
+    "cat"
+  ],
+  "bugs": {
+    "url": "https://github.com/vichyssoise/uncertainty/issues"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.4"
+  }
 }
