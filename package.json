@@ -1,6 +1,6 @@
 {
   "name": "uncertainty",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "An uncertain data having a definite value when measured.",
   "main": "index.js",
   "repository": "git@github.com:vichyssoise/uncertainty.git",
