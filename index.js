@@ -25,16 +25,17 @@ class Uncertainty {
     Object.defineProperty(this, 'value', {
       get: () => {
         if (this._state === State.Uncertain) {
-          while(this._chain.length > 0) {
-            const e = this._chain.pop()
-            e._value = e._resolver(e._dependency ? e._dependency.value : null)
-            e._state = State.Measured
-          }
+          this._chain.map(e => e._collapse())
+          this._chain.length = 0  //  Remove references explicitly
         }
-
         return this._value
       },
     })
+  }
+
+  _collapse() {
+    this._value = this._resolver(this._dependency ? this._dependency.value : null)
+    this._state = State.Measured
   }
   
   peek() { return this._state }
