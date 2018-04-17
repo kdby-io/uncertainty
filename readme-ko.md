@@ -55,6 +55,7 @@ console.log(a + 1)
 ```js
 const a = new Uncertainty()
 const b = a.then(a => !a)
+const c = b.then(b => Number(b))
 console.log(a.peek()) // Uncertain
 console.log(b.peek()) // Uncertain
 console.log(c.peek()) // Uncertain
